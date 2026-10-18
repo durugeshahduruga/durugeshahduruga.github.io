@@ -1,1 +1,45 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Dealsbe Kannada</title><style>*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif}body{background:#f6f7f8}.top{background:#ffde00;text-align:center;padding:10px;font-weight:bold}.header{background:#000;color:#fff;padding:25px;text-align:center}.header h1{letter-spacing:4px;font-size:32px}.card{background:#fff;margin:15px;border-radius:16px;padding:20px;box-shadow:0 2px 10px #ddd}.btn{display:block;background:#000;color:#fff;padding:14px;text-align:center;border-radius:12px;text-decoration:none;margin-top:12px;font-weight:bold}textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #ddd}</style></head><body><div class="top">🔥 Kannada Students ge Best AI Tools</div><div class="header"><h1>DEALSBE</h1><p>Kannada AI Tools & KPSC Doubt Solver</p><p style="margin-top:10px;background:#00ff88;color:#000;display:inline-block;padding:4px 12px;border-radius:20px;font-size:12px">● LIVE</p></div><div class="card"><h3>🤖 Best AI Tools</h3><p>KPSC, KAS, FDA doubts Kannada nalli!</p><a class="btn" href="#">Explore Tools →</a></div><div class="card"><h3>💬 Kannada Doubt Solver</h3><textarea rows="3" placeholder="Nimma doubt type maadi..."></textarea><a class="btn" style="background:#ffde00;color:#000" href="#">Ask in Kannada →</a></div><div class="card"><h3>💰 Student Deals</h3><p>Best offers for students</p><a class="btn" href="#">Deals Nodu</a></div><div style="text-align:center;padding:20px;color:#888">Made by Durugesh ❤️ LIVE aaythu!</div></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>DEALSBE</title>
+<style>
+body{margin:0;font-family:Arial;background:#f2f2f2}
+.top{background:#ffeb00;text-align:center;padding:10px;font-weight:bold}
+.header{background:#000;color:#fff;text-align:center;padding:20px}
+.card{background:#fff;margin:15px;padding:18px;border-radius:16px}
+textarea{width:100%;height:100px;border:2px solid #000;border-radius:12px;padding:12px}
+.btn{width:100%;padding:15px;border:none;border-radius:12px;font-weight:bold;margin-top:12px}
+.yellow{background:#ffeb00;color:#000}
+.black{background:#000;color:#fff}
+#ans{display:none;margin-top:12px;background:#e8ffe8;padding:12px;border-radius:10px}
+</style>
+</head>
+<body>
+<div class="top">DEALSBE - KANNADA KPSC GUIDE</div>
+<div class="header"><h1>DEALSBE</h1></div>
+<div class="card">
+<textarea id="q" placeholder="Doubt bareyri"></textarea>
+<button class="btn yellow" onclick="startMike()">🎤 Mike Click Madi</button>
+<button class="btn black" onclick="ask()">Ask in Kannada</button>
+<div id="ans"></div>
+</div>
+<script>
+function ask(){
+var a=document.getElementById('ans');
+a.style.display='block';
+var q=document.getElementById('q').value;
+a.innerText='✅ Uttara: '+q;
+}
+function startMike(){
+var S=window.SpeechRecognition||window.webkitSpeechRecognition;
+if(!S){alert('Chrome nalli open madi');return;}
+var r=new S();r.lang='kn-IN';
+r.onstart=function(){document.getElementById('ans').style.display='block';document.getElementById('ans').innerText='🎤 Keltha idini...';}
+r.onresult=function(e){document.getElementById('q').value=e.results[0][0].transcript;ask();}
+r.start();
+}
+</script>
+</body>
+</html>
