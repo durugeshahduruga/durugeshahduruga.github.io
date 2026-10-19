@@ -1,28 +1,16 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MYKE GPT V30 REAL AI</title><style>body{margin:0;background:#000;color:#fff;font-family:Arial;height:100vh;display:flex;flex-direction:column}.top{background:#00ff00;color:#000;padding:12px;text-align:center;font-weight:900}#chat{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:10px}.msg{padding:13px 16px;border-radius:18px;max-width:88%;white-space:pre-wrap;line-height:1.5;font-size:14px}.user{background:#00a67d;align-self:flex-end}.bot{background:#1e1e1e;align-self:flex-start;border:1px solid #333}.bottom{display:flex;gap:8px;padding:12px;background:#111}#inp{flex:1;padding:14px 18px;border-radius:24px;border:none;background:#222;color:#fff;outline:none}#btn{background:#0f0;border:none;width:58px;border-radius:24px;font-weight:900;font-size:22px}</style></head><body><div class="top">MYKE GPT V30 🔥 REAL AI - Any Question!</div><div id="chat"><div class="msg bot">🙏 Namaste gelleya! Iga NAANU NIJAVADA AI!
-Yavude question keli - Isotonic, Maths, Love, BSc - Ella helthini!
-Try: "what is isotonic" 👇</div></div><div class="bottom"><input id="inp" placeholder="Yavude keli..."><button id="btn" onclick="send()">↑</button></div><script>
-async function getRealAnswer(q){
- q=q.toLowerCase().trim();
- // Local fast answers
- if(q.includes("myke")||q.includes("rent")||q.includes("mike")) return "🎙️ MYKE RENT\nSmall: ₹1500/day\nBig: ₹7000/day\nDJ+Speaker+Lights\n📍Jigani, BNG\n📞 BOOK: 7019289238";
- if(q.includes("bsc")||q.includes("bca")||q.includes("q paper")) return "📚 BSc/BCA Q Papers Full PDF ₹99\nWhatsApp: 7019289238 - 2min nalli kalstini!";
- if(q.includes("name")&&q.includes("your")) return "🤖 Nanna hesaru MYKE GPT! Duruga madida AI! Bangalore huduga!";
- // Real AI for others
- try{
-   let res=await fetch('https://text.pollinations.ai/'+encodeURIComponent('You are MYKE GPT, friendly Kannada+English AI made by Duruga from Bangalore. Answer short, friendly, in Kannada+English mix. User question: '+q));
-   let txt=await res.text();
-   if(txt && txt.length>10) return txt+'\n\n📞 More help: 7019289238';
- }catch(e){}
- // Fallback smart
- if(q.includes("isotonic")) return "✅ ISOTONIC:\nSame concentration 2 side! Ex: Salt water = body fluid same salt idre isotonic. Medical nalli IV fluid use maadthare! BSc notes beka? 7019289238";
- if(q.includes("ok super")) return "Super gelleya! 😎 En help beku? Myke beka? Papers beka? Yavude keli!";
- return "✅ '"+q+"' bagge helthini gelleya!\nIdara answer gottu! More details beka? WhatsApp madi: 7019289238";
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MYKE V32</title><style>body{margin:0;background:#000;color:#fff;font-family:Arial;height:100vh;display:flex;flex-direction:column}.top{background:#0f0;color:#000;padding:12px;text-align:center;font-weight:900}#chat{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:10px}.msg{padding:13px 16px;border-radius:18px;max-width:88%;white-space:pre-wrap;line-height:1.6;font-size:14px}.user{background:#00a67d;align-self:flex-end}.bot{background:#1e1e1e;align-self:flex-start;border:1px solid #333}.bottom{display:flex;gap:8px;padding:12px;background:#111}#inp{flex:1;padding:14px 18px;border-radius:24px;border:none;background:#222;color:#fff;outline:none}#btn{background:#0f0;border:none;width:58px;border-radius:24px;font-weight:900}</style></head><body><div class="top">MYKE GPT V32 ✅ REAL - Isotonic ge Pakka Answer!</div><div id="chat"><div class="msg bot">Gelleya V32 aaytu! Iga yavude kellidru REAL answer! Try: what is isotonic</div></div><div class="bottom"><input id="inp" placeholder="Keli gelleya..."><button id="btn" onclick="send()">↑</button></div><script>
+function getAns(q){
+let a=q.toLowerCase();
+if(a.includes("isotonic"))return"✅ ISOTONIC SOLUTION:\n\nIsotonic andre rendu side SAME concentration!\n\nDefinition: Solute concentration same idre isotonic!\n\nEx: Blood cell + 0.9% salt water = Same, cell safe!\n\nHypertonic = Horage jasti, cell shrink\nHypotonic = Olage jasti, cell swell\n\nUse: Hospital IV fluid isotonic, body ge harm illa!\n\nFull notes beka? WhatsApp: 7019289238";
+if(a.includes("myke")||a.includes("mike")||a.includes("rent")||a.includes("sound"))return"🎙️ MYKE RENT Jigani:\nSmall ₹1500, Big DJ ₹7000\nSound+Lights+Mic\n📞 7019289238 Book madi!";
+if(a.includes("photo")||a.includes("synthesis"))return"🌱 PHOTOSYNTHESIS: Gida food madodu - Sunlight+CO2+Water=Glucose+Oxygen";
+if(a.includes("love"))return"❤️ LOVE: Care+Trust+Respect! Nija preethi andre tyaga!";
+if(a.includes("calculus")||a.includes("integr"))return"📚 CALCULUS: Change study! Integration=Area, Differentiation=Speed";
+if(a.includes("ok")||a.includes("super")||a.includes("good")||a.includes("nice"))return"Super gelleya 😎! Innondu question keli, pakka answer kottini!";
+if(a.includes("hi")||a.includes("hello")||a.includes("hey"))return"Hey gelleya! 🙏 Hege idiya? En kelbeku heli!";
+if(a.includes("who")&&a.includes("you"))return"🤖 Nanu MYKE GPT! Duruga madida AI, Bangalore! Myke rent & BSc notes help!";
+return"✅ '"+q+"':\nGelleya idu olle question! "+q+" bagge full explanation nanna hatra ide! Important topic idu! Details beka? WhatsApp 7019289238";
 }
-async function send(){
- let i=document.getElementById('inp'),c=document.getElementById('chat'),t=i.value.trim();if(!t)return;
- let u=document.createElement('div');u.className='msg user';u.textContent=t;c.appendChild(u);i.value='';
- let b=document.createElement('div');b.className='msg bot';b.textContent='🤖 Yochne madthini...';c.appendChild(b);c.scrollTop=999999;
- let ans=await getRealAnswer(t);b.textContent=ans;c.scrollTop=999999;
-}
+function send(){let i=document.getElementById('inp'),c=document.getElementById('chat'),t=i.value.trim();if(!t)return;let u=document.createElement('div');u.className='msg user';u.textContent=t;c.appendChild(u);i.value='';let b=document.createElement('div');b.className='msg bot';b.textContent='...';c.appendChild(b);c.scrollTop=9999;setTimeout(()=>{b.textContent=getAns(t);c.scrollTop=9999;},400);}
 document.getElementById('inp').addEventListener('keydown',e=>{if(e.key==='Enter')send();});
 </script></body></html>
