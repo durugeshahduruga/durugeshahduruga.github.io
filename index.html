@@ -1,23 +1,36 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MYKE GPT - FIXED</title>
-<style>
-body{margin:0;background:#111;color:#fff;font-family:sans-serif;display:flex;flex-direction:column;height:100vh}
-.h{background:#000;padding:12px;text-align:center;font-weight:800;border-bottom:1px solid #333}
-#c{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:10px}
-.m{padding:10px 14px;border-radius:14px;max-width:80%;white-space:pre-wrap}
-.u{align-self:flex-end;background:#333}.ai{align-self:flex-start;background:#222a5a}
-.b{background:#000;padding:10px;display:flex;gap:8px;border-top:1px solid #333}
-#q{flex:1;padding:12px;border-radius:20px;border:1px solid #444;background:#222;color:#fff}
-</style></head><body>
-<div class="h">MYKE GPT • FIXED V4 ✅</div>
-<div id="c"><div class="m ai">Ready! hi / myke / 2025 PUC paper / FDA - bere bere answer barutte! Test maadi!</div></div>
-<div class="b"><input id="q" placeholder="Prashne keli..." onkeydown="if(event.key==='Enter')go()"><button onclick="go()" style="background:#0a7;color:#fff;border:none;padding:10px 16px;border-radius:20px;font-weight:700">↑</button></div>
-<script>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MYKE GPT - ALL COURSES</title><style>body{margin:0;background:#111;color:#fff;font-family:sans-serif;display:flex;flex-direction:column;height:100vh}.h{background:#000;padding:12px;text-align:center;font-weight:800;border-bottom:1px solid #333}#c{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:10px}.m{padding:10px 14px;border-radius:14px;max-width:85%;white-space:pre-wrap;line-height:1.4}.u{align-self:flex-end;background:#333}.ai{align-self:flex-start;background:#1e2a5a}.b{background:#000;padding:10px;display:flex;gap:8px;border-top:1px solid #333}#q{flex:1;padding:12px;border-radius:20px;border:1px solid #444;background:#222;color:#fff;outline:none}</style></head><body><div class="h">MYKE GPT • ALL COURSES V6 ✅</div><div id="c"><div class="m ai">🙏 Namaste! Yavude course keli!
+• PUC, SSLC, Degree
+• BSc, BCA, BCom, BA, MCom, MBA, MCA, BE
+• 3D Print, Myke, FDA
+Yen beku? Keli!</div></div><div class="b"><input id="q" placeholder="Yavude prashne keli... Ex: BCA 2024 paper" onkeydown="if(event.key==='Enter')go()"><button onclick="go()" style="background:#0a7;color:#fff;border:none;padding:12px 18px;border-radius:20px;font-weight:800">↑</button></div><script>
+const courses={"puc":"PUC","sslc":"SSLC","bsc":"BSc","bca":"BCA","bcom":"BCom","mcom":"MCom","ba":"BA","ma":"MA","msc":"MSc","mba":"MBA","mca":"MCA","be":"BE/BTech","btech":"BTech","diploma":"Diploma","bba":"BBA","b.ed":"B.Ed","bed":"B.Ed","llb":"LLB"};
 function ans(t){
- t=t.toLowerCase();
- if(t==="hi"||t==="hello"||t.includes("namaste")) return "Namaste gelleya!🙏\nEn beku? \n• 2025 PUC paper\n• Myke rate\n• 3D print\nKeli: 7019289238";
- if(t.includes("2025")||t.includes("paper")||t.includes("ಪೇಪರ್")){
-  if(t.includes("puc")) return "📚 PUC 2025 PAPERS\nKannada, English, Physics, Chemistry, Maths\nkseab.karnataka.gov.in\nFull list: 7019289238";
-  if(t.includes("sslc")||t.includes("10th")) return "📄 SSLC 2025 PAPERS\nMaths Science Social Kannada English\nkseab site nalli ide
+ let low=t.toLowerCase().trim();
+ if(!low) return "";
+ if(low==="hi"||low==="hello"||low==="hey"||low.includes("namaste")) return "Namaste gelleya! 🙏\n\nNaanu yella course ge help maadtini:\n• PUC, SSLC Papers\n• Degree: BSc, BCA, BCom, MCom, MBA etc\n• Myke, 3D Print, FDA\n\nEn beku heli: Ex: 'BCA 3rd sem papers'\n📞 7019289238";
+
+ // MYKE / 3D / FDA check first
+ if(low.includes("myke")||low.includes("mike")||low.includes("ಮೈಕ್")) return "🎙️ MYKE / MIKE RATE - JIGANI\n• Chikka Myke: ₹1500\n• Madhya: ₹3500\n• Doddha Function Myke: ₹7000\n• Wireless: ₹2500\nFREE Delivery Jigani/Anekal\nCall: 7019289238";
+ if(low.includes("3d print")||low==="3d"||low.includes("3d printing")) return "🖨️ 3D PRINTING SERVICE JIGANI\n• ₹5 per gram\n• Toys, Gifts, Prototypes, Name Plates\n• Same Day Service\n📞 7019289238";
+ if(low.includes("fda")||low.includes("sda")||low.includes("kpsc")) return "📖 FDA / SDA / KPSC COACHING\n• Fees: ₹5000/month\n• New Batch Started\n• Notes + Question Papers Included\n📞 7019289238";
+
+ // COURSE DETECTION - YELLA COURSE
+ for(let key in courses){
+   if(low.includes(key)){
+     let courseName=courses[key];
+     let year=low.match(/20\d{2}/)?.[0]||"2023-25";
+     let sem=low.match(/\d+(?:st|nd|rd|th)?\s*sem/)?.[0]||"All Sem";
+     return `📚 ${courseName} QUESTION PAPERS - ${year.toUpperCase()}\n\n✅ ${courseName} ${sem}\n✅ All Subjects Available\n✅ Previous Year Solved Papers\n✅ ${year} Latest Pattern\n\nDownload: kseab / University site\nFull PDF / Xerox Jigani:\n📞 7019289238 - WhatsApp Maadi\n\nBeka andre "${courseName} ${sem} syllabus" anta keli!`;
+   }
+ }
+ // GENERIC QUESTION PAPER WORD
+ if(low.includes("paper")||low.includes("qution")||low.includes("question")||low.includes("ಪೇಪರ್")||low.includes("syllabus")||low.includes("notes")||low.includes("degree")){
+   return `📚 QUESTION PAPERS / NOTES\n\nNeevu kellida: "${t}"\n\n✅ Yavude Course idru sigutte:\n• Degree - BSc, BCA, BCom, BA, MCom, MBA\n• PUC, SSLC, Diploma, BE\n\n✅ Yenu beku?\n• Previous Year Papers\n• Syllabus Copy\n• Notes\n\nHelu: "${t} - yav year?" anta sariyagi keli\nFull Set: 7019289238`;
+ }
+ // GENERIC EDUCATIONAL QUESTION - ANSWER ANYTHING
+ return `💡 Nimma Prashne: "${t}"\n\nIdara bagge mahiti:\n\n✅ Idu ${t.length>15?"tumbya important prashne":"samanaya prashne"}. Nanu idara bagge vivaravagi heluttini.\n\n📖 Summary: "${t}" bagge sampoorna mahiti, notes, question paper pattern, exam ge hege baribeku anta ellavu Jigani center nalli sigutte.\n\n📞 More Details / PDF / Explanation beka? \nDirect Call/WhatsApp: 7019289238\n\nBare course name heli - Ex: "BCA Java notes"`;
+}
+function go(){
+ var i=document.getElementById('q'),v=i.value.trim();if(!v)return;
+ var c=document.getElementById('c');
