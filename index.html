@@ -3,58 +3,60 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MYKE GPT V20</title>
+<title>MYKE GPT V22</title>
 <style>
-html,body{margin:0;height:100%}
-body{background:#000;color:#fff;font-family:Arial;display:flex;flex-direction:column}
-.t{background:#0f0;color:#000;padding:12px;text-align:center;font-weight:900;font-size:18px}
-#c{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:10px}
-.m{padding:12px 14px;border-radius:14px;max-width:85%;white-space:pre-wrap;line-height:1.4}
-.u{align-self:flex-end;background:#0a7;color:#fff}
-.ai{align-self:flex-start;background:#1e293b;border:1px solid #334155}
-.d{padding:12px;background:#111;display:flex;gap:8px;border-top:1px solid #333}
-#q{flex:1;padding:14px 16px;border-radius:24px;border:1px solid #555;background:#222;color:#fff;outline:none;font-size:16px}
-#s{background:#0f0;color:#000;border:none;width:60px;height:48px;border-radius:24px;font-weight:900;font-size:22px}
+body{margin:0;background:#000;color:#fff;font-family:Arial;display:flex;flex-direction:column;height:100vh}
+.top{background:#00ff00;color:#000;padding:12px;text-align:center;font-weight:900;font-size:18px}
+.msg{padding:12px 14px;margin:8px;border-radius:14px;max-width:85%;line-height:1.5}
+.me{background:#0a8f5c;align-self:flex-end;color:#fff}
+.bot{background:#1e293b;align-self:flex-start;border:1px solid #333}
+#chat{flex:1;overflow:auto;display:flex;flex-direction:column;padding:10px}
+.bar{display:flex;gap:8px;padding:12px;background:#111;border-top:1px solid #333}
+#q{flex:1;padding:15px;border-radius:25px;border:none;background:#222;color:#fff;font-size:16px}
+#btn{background:#00ff00;color:#000;border:none;width:60px;height:50px;border-radius:25px;font-weight:900;font-size:22px}
 </style>
 </head>
 <body>
-<div class="t">MYKE GPT V20 ✅ LIVE</div>
-<div id="c">
-<div class="m ai">🙏 Namaste Gelleya!
-
-Naanu yella course ge help maadtini:
-• PUC, SSLC Papers
-• Degree: BSc, BCA, BCom, MCom, MBA etc
-• Myke, 3D Print, FDA
-
-En beku heli:
-Ex: 'BCA 3rd sem papers'
+<div class="top">MYKE GPT V22 ✅</div>
+<div id="chat">
+<div class="msg bot">🙏 Namaste Gelleya! 
+Myke / BSc / BCA / PUC Yavude keli!
 📞 7019289238</div>
 </div>
-<div class="d">
-<input id="q" placeholder="BSc maths / 10th / PUC / Myke...">
-<button id="s" onclick="go()">↑</button>
+<div class="bar">
+<input id="q" placeholder="Myke rent / BSc papers...">
+<button id="btn" onclick="send()">↑</button>
 </div>
 <script>
-function ans(t){
- let low=t.toLowerCase().trim();
- if(!low) return "";
- if(low==="hi"||low==="hello"||low==="hey"||low.includes("namaste")) return "Namaste gelleya! 🙏\n\nNaanu yella course ge help maadtini:\n• PUC, SSLC Papers\n• Degree: BSc, BCA, BCom, MCom, MBA etc\n• Myke, 3D Print, FDA\n\nEn beku heli: Ex: 'BCA 3rd sem papers'\n📞 7019289238";
- if(low.includes("myke")||low.includes("mike")) return "🎙️ MYKE RENT Jigani\n\nChikka Myke: ₹1500/day\nMadhya: ₹3500/day\nDoddha: ₹7000/day\n\n📞 Call: 7019289238\nLocation: Jigani";
- if(low.includes("3d")||low.includes("print")) return "🖨️ 3D PRINT Jigani\nCustom design + Printing\n₹10/gram + Design charge\n📞 7019289238";
- if(low.includes("bsc")) return "📚 BSc ALL SEM Q PAPERS 2024-25\n\n• Maths: Calculus, Algebra, Analysis\n• Physics, Chemistry, CS\n• Bangalore, BCU, BU\n\nFull PDF: ₹99\n📞 7019289238";
- if(low.includes("bca")) return "📚 BCA ALL SEM PAPERS + NOTES\n• 1st to 6th Sem Q Papers\n• Lab Manuals + Important Q\n• BU / BCU Pattern\n\nFull: ₹99\n📞 7019289238";
- if(low.includes("10")||low.includes("sslc")) return "📚 SSLC 10th ALL SUBJECTS\n• 5 Years Q Papers + Answers\n• Maths, Science, Social\n\nFull: ₹99\n📞 7019289238";
- if(low.includes("puc")||low.includes("12")) return "📚 PUC 1st & 2nd ALL SUBJECTS\n• Science / Commerce / Arts\n• Q Papers + Notes\n\nFull: ₹99\n📞 7019289238";
- return "💡 '"+t+"'\n\n✅ Full PDF Jigani Center nalli ide!\nNeenu kelida course nodta idini...\n\n📞 WhatsApp: 7019289238\nType maadi: 'BSc maths' / 'BCA papers' / 'Myke rent'";
+function getAns(t){
+ let a=t.toLowerCase();
+ if(a.includes("myke")||a.includes("mike")||a.includes("mic")||a.includes("rent")){return "🎙️ MYKE RENT JIGANI ✅\n\nSmall Myke: ₹1500 / day\nMedium: ₹3500 / day\nBig DJ Myke: ₹7000 / day\n\n📍 Jigani, Bangalore\n📞 Call/WhatsApp: 7019289238\n\nBook maadi gelleya!"}
+ if(a.includes("bsc")){return "📚 BSc ALL SEM Q PAPERS 2024-25\n\nMaths: Calculus, Algebra, Stats\nPhysics, Chemistry, Computer Science\nBU, BCU, Bangalore University\n\nFull PDF Set: ₹99 Only\n📞 7019289238"}
+ if(a.includes("bca")){return "📚 BCA 1st to 6th SEM\n\nQ Papers + Notes + Lab Manuals\nBU Pattern\nFull Set: ₹99\n📞 7019289238"}
+ if(a.includes("bcom")||a.includes("mcom")){return "📚 BCom / MCom ALL SEM Papers\nFull: ₹99\n📞 7019289238"}
+ if(a.includes("puc")||a.includes("12th")||a.includes("12")){return "📚 PUC 1st & 2nd Year\nScience / Commerce / Arts\nQ Papers + Important Q\nFull: ₹99\n📞 7019289238"}
+ if(a.includes("10th")||a.includes("sslc")||a.includes("10")){return "📚 SSLC 10th ALL SUBJECTS\n5 Years Papers + Answers\nFull: ₹99\n📞 7019289238"}
+ if(a.includes("3d")||a.includes("print")){return "🖨️ 3D PRINTING Jigani\n₹10/gram + Design\n📞 7019289238"}
+ if(a.includes("hi")||a.includes("hello")||a.includes("hey")){return "Namaste gelleya! 🙏\nEn beku heli?\n• Myke Rent\n• BSc/BCA Papers\n• PUC/SSLC Papers\n📞 7019289238"}
+ return "✅ '"+t+"' \n\nIdu Jigani Center nalli ide gelleya!\nFull PDF / Myke rent sigutte!\n\n📞 WhatsApp Maadi: 7019289238\n\nTry maadi: 'Myke' / 'BSc' / 'BCA' anta type maadi!"
 }
-function go(){
- var i=document.getElementById('q');var c=document.getElementById('c');var t=i.value.trim();if(!t)return;
- var u=document.createElement('div');u.className='m u';u.textContent=t;c.appendChild(u);
- var b=document.createElement('div');b.className='m ai';b.textContent=ans(t);c.appendChild(b);
- i.value='';c.scrollTop=c.scrollHeight+500;
+function send(){
+ let input=document.getElementById('q');
+ let chat=document.getElementById('chat');
+ let text=input.value.trim();
+ if(!text) return;
+ let me=document.createElement('div');
+ me.className='msg me';
+ me.textContent=text;
+ chat.appendChild(me);
+ let bot=document.createElement('div');
+ bot.className='msg bot';
+ bot.textContent=getAns(text);
+ chat.appendChild(bot);
+ input.value='';
+ chat.scrollTop=chat.scrollHeight+500;
 }
-document.getElementById('q').addEventListener('keydown',function(e){if(e.key==='Enter')go();});
+document.getElementById('q').addEventListener('keydown',function(e){if(e.key==='Enter')send()});
 </script>
 </body>
 </html>
